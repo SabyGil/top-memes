@@ -1,30 +1,17 @@
 import React from 'react'
 import axios from 'axios'
 
+//  APP
+//      /     \
+// ALLMEME    HOME
+
 export default class Home extends React.Component {
-  state = {
-    memesArr: [],
-    isDailyMemeReady: false,
-  }
-
-  componentDidMount() {
-    // axios.get(`https://jsonplaceholder.typicode.com/users`).then((res) => {
-    //   const persons = res.data
-    //   this.setState({ persons })
-    // })
-
-    axios.get(`https://api.imgflip.com/get_memes`).then((res) => {
-      // console.log(res.data.data)
-      // console.log('000')
-      const memesArr = res.data.data.memes
-      this.setState({ memesArr })
-    })
-  }
-
   // meme of the day will be a random selection in the array
   getMemeOfDay() {
+    const { memesArr } = this.props
+    if (memesArr.length === 0) return
+
     // get random index value
-    const { memesArr } = this.state
     // if (memesArr.length < 1) return
     const randomIndex = Math.floor(Math.random() * memesArr.length)
 
@@ -39,12 +26,7 @@ export default class Home extends React.Component {
   }
 
   render() {
-    // console.log(this.state)
-    let meme
-    if (this.state.memesArr.length > 0) {
-      meme = this.getMemeOfDay()
-      this.state.isDailyMemeReady = true // ILLEGAL
-    }
+    let meme = this.getMemeOfDay()
 
     // console.log(meme + '<--')
 
@@ -61,7 +43,7 @@ export default class Home extends React.Component {
             <img src={m.url} alt='' srcset='' />
           </li>
         ))} */}
-        {this.state.isDailyMemeReady ? (
+        {meme ? (
           <React.Fragment>
             {meme.name}
             <img src={meme.url} alt='' srcSet='' />
