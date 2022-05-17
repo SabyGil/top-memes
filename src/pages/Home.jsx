@@ -43,7 +43,7 @@ export default class Home extends React.Component {
     let meme
     if (this.state.memesArr.length > 0) {
       meme = this.getMemeOfDay()
-      this.state.isDailyMemeReady = true
+      this.state.isDailyMemeReady = true // ILLEGAL
     }
 
     // console.log(meme + '<--')
