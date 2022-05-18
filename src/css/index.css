@@ -88,12 +88,31 @@ header ul li a {
 
   border: 2px solid blue;
   padding: 1em;
-  background-color: azure;
+  background-color: rgb(162, 186, 169);
 }
 
 .meme {
   width: 30%;
-  border: 1px solid red;
-  border-radius: 10px;
+
+  /* border: 1px solid red; */
+  border-radius: 7px;
   overflow: hidden;
+  background-color: rgb(203, 203, 203);
+  box-shadow: 0 0 10px 0px rgb(63, 63, 63);
+
+  position: relative;
+  bottom: 1px;
+  transition: bottom 0.2s, box-shadow 0.2s;
+}
+.meme img {
+  /* width: 200px; */
+  height: 400px;
+  object-fit: cover;
+}
+.meme img:hover {
+  object-fit: contain;
+}
+.meme:hover {
+  box-shadow: 0 0 15px 5px rgb(25, 25, 25);
+  bottom: 10px;
 }
