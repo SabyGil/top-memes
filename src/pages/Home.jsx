@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import Meme from './Meme'
 
 //  APP
 //      /     \
@@ -19,7 +20,7 @@ export default class Home extends React.Component {
     const meme = memesArr[randomIndex]
     // console.log(meme)
     const { name, url } = meme
-    console.log(name, url)
+    // console.log(name, url)
     const memeInfo = { name, url }
 
     return memeInfo
@@ -32,7 +33,7 @@ export default class Home extends React.Component {
 
     // const dailyMemeName = meme
     return (
-      <div>
+      <div className=''>
         {/* {this.state.persons.map((person) => (
           <li key={person.id}>{person.name}</li>
         ))} */}
@@ -43,13 +44,7 @@ export default class Home extends React.Component {
             <img src={m.url} alt='' srcset='' />
           </li>
         ))} */}
-        {meme ? (
-          <React.Fragment>
-            {meme.name}
-            <img src={meme.url} alt='' srcSet='' />
-            {console.log('here')}
-          </React.Fragment>
-        ) : null}
+        {meme ? <Meme meme={meme} /> : null}
       </div>
     )
   }

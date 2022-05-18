@@ -54,3 +54,46 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+header {
+  margin-bottom: 1rem;
+}
+header ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+header ul li {
+  padding: 0 2em;
+  background-color: greenyellow;
+}
+
+header ul li a {
+  font-size: 20px;
+}
+.page-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 80vw;
+  border: 1px solid green;
+}
+
+.memes-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1em;
+
+  border: 2px solid blue;
+  padding: 1em;
+  background-color: azure;
+}
+
+.meme {
+  width: 30%;
+  border: 1px solid red;
+  border-radius: 10px;
+  overflow: hidden;
+}

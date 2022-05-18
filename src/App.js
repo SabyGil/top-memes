@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import AllMemes from './pages/AllMemes'
+import Header from './pages/Header'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
@@ -24,7 +25,6 @@ import { useEffect, useState } from 'react'
 
 const defaultMemes = []
 function App() {
-  //     [ datatype,  setFn() ] = useState(defaultVal);
   const [memesArr, setMemesArr] = useState(defaultMemes) // holds all memes
 
   // Will fetch memes On Mount
@@ -39,8 +39,8 @@ function App() {
   console.log('RENDER', memesArr)
 
   return (
-    <div className='App'>
-      <div>nav bar</div>
+    <div className='App page-container'>
+      <Header />
       <Routes>
         <Route path='/' element={<Home memesArr={memesArr} />} />
         <Route path='/all-memes' element={<AllMemes memesArr={memesArr} />} />
