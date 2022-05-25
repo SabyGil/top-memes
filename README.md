@@ -13,10 +13,10 @@ an AllMemes page with 100 memes fetched from an API
 
 Home page
 
-(https://raw.githubusercontent.com/SabyGil/top-memes/main/.github/memes_img1.jpg)
+![main memes_img1](https://raw.githubusercontent.com/SabyGil/top-memes/main/.github/memes_img1.jpg)
 
 All memes page
-(https://raw.githubusercontent.com/SabyGil/top-memes/main/.github/memes_img2.jpg)
+![main memes_img2](https://raw.githubusercontent.com/SabyGil/top-memes/main/.github/memes_img2.jpg)
 
 All memes mobile view
-(https://raw.githubusercontent.com/SabyGil/top-memes/main/.github/memes_img3.jpg)
+![main memes_img3](https://raw.githubusercontent.com/SabyGil/top-memes/main/.github/memes_img3.jpg)
