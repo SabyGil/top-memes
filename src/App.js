@@ -5,24 +5,6 @@ import Header from './pages/Header'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-// componentDidMount() {
-//   // axios.get(`https://jsonplaceholder.typicode.com/users`).then((res) => {
-//   //   const persons = res.data
-//   //   this.setState({ persons })
-//   // })
-
-//   axios.get(`https://api.imgflip.com/get_memes`).then((res) => {
-//     // console.log(res.data.data)
-//     // console.log('000')
-//     const memesArr = res.data.data.memes
-//     this.setState({ memesArr })
-//   })
-// }
-// axios.get(`https://jsonplaceholder.typicode.com/users`).then((res) => {
-//   const persons = res.data
-//   this.setState({ persons })
-// })
-
 const defaultMemes = []
 function App() {
   const [memesArr, setMemesArr] = useState(defaultMemes) // holds all memes
@@ -36,7 +18,7 @@ function App() {
     })
   }, [])
 
-  console.log('RENDER', memesArr)
+  // console.log('RENDER', memesArr)
 
   return (
     <div className='App page-container'>

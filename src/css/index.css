@@ -76,7 +76,7 @@ header ul li a {
   margin: 0 auto;
   max-width: 1280px;
   width: calc(100% - 10px);
-  border: 1px solid green;
+  border: 1px solid black;
 }
 
 .bg-text {
@@ -94,7 +94,7 @@ header ul li a {
   row-gap: 1em;
   column-gap: 1em;
 
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   padding: 1em;
   background-color: rgb(162, 186, 169);
 }
